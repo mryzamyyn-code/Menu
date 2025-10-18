@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Меню кафе</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1616627987937-09b1f34688d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') no-repeat center center / cover;
+      color: #4e342e;
+      position: relative;
+    }
+
+    /* Полупрозрачный фильтр с тёплым оттенком */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(255, 235, 205, 0.85), rgba(210, 180, 140, 0.9));
+      backdrop-filter: blur(4px);
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #4e342e;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dish-card {
+      background: rgba(255, 248, 220, 0.9); /* светлый бежевый */
+      border: 1px solid rgba(160, 120, 90, 0.2);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(80, 60, 40, 0.1);
+      cursor: pointer;
+    }
+
+    .dish-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(80, 60, 40, 0.3);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .dish-card h2 {
+      font-size: 1.4em;
+      margin: 16px;
+      color: #5d4037;
+    }
+
+    .dish-card p {
+      font-size: 1em;
+      margin: 0 16px 16px;
+      color: #6d4c41;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Меню кафе</h1>
+  </header>
+
+  <main class="menu-grid">
+    <div class="dish-card">
+      <img src="https://img.postershop.me/cdn-cgi/image/width=640,format=webp/https://img.postershop.me/25712/010a5b7e-50e8-4552-b127-3824565ec200_image.jpeg" alt="Кимпаб">
+      <h2>Кимпаб с мясом</h2>
+      <p>Аппетитные рулетики из ароматного риса, обёрнутые в нори, с сочной говядиной, свежими овощами и пикантной заправкой.</p>
+    </div>
+    <div class="dish-card">
+      <img src="https://img.postershop.me/cdn-cgi/image/width=640,format=webp/https://img.postershop.me/25712/4108db96-6987-44f5-8917-4247bb9e2e7d_image.jpeg" alt="Кимчи тиге">
+      <h2>Кимчи тиге</h2>
+      <p>Острый и согревающий корейский суп с насыщенным вкусом ферментированного кимчи, мягким тофу и тонкими ломтиками говядины.</p>
+    </div>
+    <div class="dish-card">
+      <img src="https://img.postershop.me/cdn-cgi/image/width=640,format=webp/https://img.postershop.me/25712/a4b8e09b-7cb9-4c5a-a4e1-5f3dec965dfb_image.jpeg" alt="Пулькоги">
+      <h2>Пулькоги</h2>
+      <p>Тонко нарезанная говядина, маринованная в сладко-пряном соусе и обжаренная до карамельной корочки.</p>
+    </div>
+  </main>
+</body>
+</html>
+
+
